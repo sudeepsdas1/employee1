@@ -1,12 +1,19 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 var schema = new mongoose.Schema({
-            name: {
-                type: String,
-                required: true
-            },
-            email: {
-                type: String,
-                required: true,
-                unique: true
-            },
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  occupation: {
+    type: String,
+    required: true,
+  },
+  gender: String,
+  status: String,
+});
