@@ -18,3 +18,4 @@ var schema = new mongoose.Schema({
     status: String,
 });
 onst Userdb = mongoose.model('userdb', schema);
+module.exports = Userdb;
