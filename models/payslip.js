@@ -1,3 +1,4 @@
-const services = require("../services/render");
-const controller = require("../controller/controller");
-route.get("/", services.homeRoutes);
+/ Import necessary modules
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose'); // If you're using MongoDB
