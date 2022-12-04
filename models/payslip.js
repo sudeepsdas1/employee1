@@ -12,3 +12,5 @@ mongoose.connect('<db_uri>', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+// Create a Mongoose schema for your payslip model (replace <payslip_schema> with your actual schema)
+const PayslipSchema = new mongoose.Schema( < payslip_schema > );
