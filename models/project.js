@@ -8,6 +8,11 @@ const app = express();
 app.use(bodyParser.json());
 // Connect to your MongoDB (replace <db_uri> with your actual MongoDB URI)
 mongoose.connect("<db_uri>", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 });
+// Create a Mongoose schema for your project model (replace <project_schema> with your actual schema)
+const ProjectSchema = new mongoose.Schema( < project_schema > );
+
+// Create a Mongoose model for your project (replace 'Project' with your desired model name)
+const Project = mongoose.model('Project', ProjectSchema);
