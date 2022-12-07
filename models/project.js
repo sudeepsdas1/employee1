@@ -16,3 +16,13 @@ const ProjectSchema = new mongoose.Schema( < project_schema > );
 
 // Create a Mongoose model for your project (replace 'Project' with your desired model name)
 const Project = mongoose.model('Project', ProjectSchema);
+// Define a route to fetch projects assigned to an employee
+app.get('/projects/:employeeId', async(req, res) => {
+            try {
+                const employeeId = req.params.employeeId;
+                // Fetch projects assigned to the specified employee from the database
+                const assignedProjects = await Project.find({ assignedTo: employeeId });
+
+                if (assignedProjects.length === 0) {
+                    return res.status(404).json({ error: 'No projects assigned to this employee' });
+                }
