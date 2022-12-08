@@ -32,3 +32,8 @@ app.get('/projects/:employeeId', async(req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+// Start the server on a specified port (e.g., 3000)
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
