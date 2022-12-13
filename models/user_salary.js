@@ -15,3 +15,8 @@ const Employee = mongoose.model('Employee', EmployeeSchema);
 
 // Define a route to fetch assigned salary for an employee
 app.get('/employee/:employeeId/salary', async(req, res) => {
+            try {
+                const employeeId = req.params.employeeId;
+
+                // Fetch the employee data, including the salary information, from the database
+                const employee = await Employee.findById(employeeId, 'name salary');
