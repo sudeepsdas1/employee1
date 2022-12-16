@@ -14,3 +14,8 @@ mongoose.connect('<db_uri>', {
 });
 // Create a Mongoose schema for your payslip model (replace <payslip_schema> with your actual schema)
 const PayslipSchema = new mongoose.Schema( < payslip_schema > );
+// Create a Mongoose model for your payslip (replace 'Payslip' with your desired model name)
+const Payslip = mongoose.model('Payslip', PayslipSchema);
+
+// Define a route to fetch payslip by ID
+app
